@@ -1,18 +1,20 @@
 def main():
-    spacecraft = {"name": "James Webb Space Telescope"}
-    spacecraft.update({"distance": 0.01, "orbit": "Sun"})
-#   spacecraft["distance"] = 0.01
-    print(create_report(spacecraft))
+    names = ["Mario", "Luigi", "Daisy", "Yoshi"]
+    for name in names:
+        print(write_letter(name, "Princess Peach"))
 
-def create_report(spacecraft):
+
+def write_letter(receiver, sender):
     return f"""
-    ========= REPORT =========
-
-    Name: {spacecraft["name"]}
-    Distance: {spacecraft.get("distance", "Unknown")} AU
-    Orbit: {spacecraft.get("orbit", "Unknown")}
-    
-    ==========================
-    """
+        +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+            Dear {receiver},
+            
+            You are cordially invited to a ball at 
+            Peach's Castle this evening, 7:00 PM:
+            
+            Sincerely,
+            {sender}
+        +~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
+        """
 
 main()
