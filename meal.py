@@ -9,10 +9,14 @@ def main():
     else:
         return
 
+# Converts the time input into the ##:## format.
 def convert(time):
+    # adds ':' in ##:##
     x, y = time.split(":")
+    # float() turns x into a value which represents hours, turns y into a value which represents minutes. Minutes is split into a value of 1/60.
     hr = float(x)
     mins = float(y) * 1 / 60
+    
     return float(hr + mins)
 
 if __name__ == "__main__":
